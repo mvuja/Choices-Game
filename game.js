@@ -121,7 +121,7 @@ const textNodes = [
   },
   {
     id: 6,
-    text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+    text: 'You wake up well rested and full of energy ready to explore the Castle.',
     options: [
       {
         text: 'Explore the castle',
@@ -131,7 +131,7 @@ const textNodes = [
   },
   {
     id: 7,
-    text: 'While exploring the castle you come across a horrible monster in your path.',
+    text: 'While exploring the Castle you come across Dragon Aiden.',
     options: [
       {
         text: 'Try to run',
@@ -148,7 +148,7 @@ const textNodes = [
         nextText: 10
       },
       {
-        text: 'Throw the blue goo at it',
+        text: 'Throw the green potion at it',
         requiredState: (currentState) => currentState.blueGoo,
         nextText: 11
       }
@@ -156,7 +156,7 @@ const textNodes = [
   },
   {
     id: 8,
-    text: 'Your attempts to run are in vain and the monster easily catches.',
+    text: 'Your attempts to run are in vain and the Dragon Aiden easily catches you.',
     options: [
       {
         text: 'Restart the jurney',
@@ -166,7 +166,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: 'You foolishly thought this monster could be slain with a single sword.',
+    text: 'You foolishly thought this Dragon could be slain with a single sword.',
     options: [
       {
         text: 'Restart the jurney',
@@ -176,7 +176,7 @@ const textNodes = [
   },
   {
     id: 10,
-    text: 'The monster laughed as you hid behind your shield and ate you.',
+    text: 'The Dragon Aiden laughed as you hid behind your shield and ate you.',
     options: [
       {
         text: 'Restart the jurney',
@@ -186,7 +186,7 @@ const textNodes = [
   },
   {
     id: 11,
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+    text: 'You threw your green magical potion at the Dragon Aiden and it exploded. After the dust settled, you saw the Dragon was destroyed. Seeing your victory, you decide to claim his castle as your own and live out the rest of your days there.',
     options: [
       {
         text: 'Congratulations. Play the jurney again.',
