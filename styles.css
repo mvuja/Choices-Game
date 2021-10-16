@@ -5,7 +5,17 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
+::-moz-selection{
+  background-color: hsl(200, 100%, 50%);
+  color: #fff;
+}
+
+::selection{
+  background-color: hsl(200, 100%, 50%);
+  color: #fff;
+}
+
+body{
   padding: 0;
   margin: 0;
   display: flex;
@@ -17,13 +27,17 @@ body {
   position: relative;
 }
 
-.container {
+html,body{
+  overflow-x: hidden;
+}
+
+.container{
   width: 800px;
   max-width: 80%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(7px);
   padding: 40px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px;
+  border-radius: 10px;
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -34,6 +48,11 @@ body {
 
 .text{
   font-size: 1.5rem;
+  color: #fff;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .btn-grid {
@@ -43,24 +62,80 @@ body {
   margin-top: 20px;
 }
 
-.btn {
-  background-color: hsl(200, 100%, 50%);
+.btn{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  /* background: -webkit-linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E);  
+  background: -moz-linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E);  
+  background: -o-linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E);  
+  background: linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E); 
+  background-size: 100% 300%; */
+  background: #000;
+  overflow: hidden;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 15px;
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: background .2s ease;
+  transition: background 1s ease;
+  position: relative;
 }
 
-.btn:hover {
-  background-color: hsl(200, 97%, 38%);
+/* .btn:focus{
+  background-position: 0 100%;
+} */
+
+.btn:hover{
+  background: rgb(10, 10, 10);
 }
+
+.btn:focus{
+  background: transparent;
+}
+
+
+.btn:before,
+.btn:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: rgb(58, 0, 165);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:before{
+  opacity: .4;
+}
+
+.btn:after{
+  transition-delay: .7s;
+}
+
+.btn:focus{
+  color: #fff;
+}
+
+.btn:focus:before,
+.btn:focus:after{
+  top: 0;
+}
+
+
+
+
+
+
 
 #particles-js{
-  background-color: rgb(3, 3, 3);
+  background-color: rgb(8, 8, 8);
   color: #ffffff88;
   position: absolute;
   top: 0;
@@ -70,8 +145,8 @@ body {
   z-index: 1;
 }
 
-@media only screen and (max-width:425px){
-  .btn-grid {
+@media only screen and (max-width:450px){
+  .btn-grid{
     grid-template-columns: repeat(1, auto);
     gap: 10px;
     margin-top: 20px;
@@ -85,7 +160,7 @@ body {
     font-size: .8rem;
   }
 
-  .container {
+  .container{
     padding: 20px;
     max-width: 85%;
   }

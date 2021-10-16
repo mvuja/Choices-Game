@@ -20,7 +20,12 @@ function showTextNode(textNodeIndex) {
       const button = document.createElement('button')
       button.innerText = option.text
       button.classList.add('btn')
-      button.addEventListener('click', () => selectOption(option))
+      button.addEventListener('click', () => {
+        setTimeout(() => {
+
+          selectOption(option)
+        }, 1700)
+      })
       optionButtonsElement.appendChild(button)
     }
   })
@@ -42,15 +47,15 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'You wake up in a strange place and you see a jar of blue goo near you.',
+    text: 'The story begins in a magical forrest near a Castle of Dragon Aiden. You start your journey as you see a jar of green magical potion near you.',
     options: [
       {
-        text: 'Take the goo',
+        text: 'Take the potion',
         setState: { blueGoo: true },
         nextText: 2
       },
       {
-        text: 'Leave the goo',
+        text: 'Leave the potion',
         nextText: 2
       }
     ]
