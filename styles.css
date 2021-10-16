@@ -67,11 +67,6 @@ html,body{
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  /* background: -webkit-linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E);  
-  background: -moz-linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E);  
-  background: -o-linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E);  
-  background: linear-gradient(#C7D3DC,#5B798E, #C7D3DC,#5B798E); 
-  background-size: 100% 300%; */
   background: #000;
   overflow: hidden;
   border: none;
@@ -80,23 +75,15 @@ html,body{
   padding: 15px;
   color: white;
   font-size: 1rem;
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: none;
   transition: background 1s ease;
   position: relative;
 }
 
-/* .btn:focus{
-  background-position: 0 100%;
-} */
-
 .btn:hover{
   background: rgb(10, 10, 10);
 }
-
-.btn:focus{
-  background: transparent;
-}
-
 
 .btn:before,
 .btn:after{
@@ -106,7 +93,7 @@ html,body{
   height: 100%;
   top: -100%;
   left: 0;
-  background: rgb(58, 0, 165);
+  background: #4409b3;
   z-index: -1;
   transition: all 1s;
 }
@@ -120,6 +107,7 @@ html,body{
 }
 
 .btn:focus{
+  background: transparent;
   color: #fff;
 }
 
@@ -127,10 +115,6 @@ html,body{
 .btn:focus:after{
   top: 0;
 }
-
-
-
-
 
 
 
@@ -164,4 +148,9 @@ html,body{
     padding: 20px;
     max-width: 85%;
   }
+}
+
+
+#magicPointer{
+  z-index: 2;
 }

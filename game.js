@@ -22,7 +22,6 @@ function showTextNode(textNodeIndex) {
       button.classList.add('btn')
       button.addEventListener('click', () => {
         setTimeout(() => {
-
           selectOption(option)
         }, 1700)
       })
@@ -62,16 +61,16 @@ const textNodes = [
   },
   {
     id: 2,
-    text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+    text: 'You venture forth in search of the mystical Dragon Aiden when you come across a merchant.',
     options: [
       {
-        text: 'Trade the goo for a sword',
+        text: 'Trade the potion for a sword',
         requiredState: (currentState) => currentState.blueGoo,
         setState: { blueGoo: false, sword: true },
         nextText: 3
       },
       {
-        text: 'Trade the goo for a shield',
+        text: 'Trade the potion for a shield',
         requiredState: (currentState) => currentState.blueGoo,
         setState: { blueGoo: false, shield: true },
         nextText: 3
@@ -84,7 +83,7 @@ const textNodes = [
   },
   {
     id: 3,
-    text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+    text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a Castle of Dragon Aiden.',
     options: [
       {
         text: 'Explore the castle',
@@ -102,10 +101,10 @@ const textNodes = [
   },
   {
     id: 4,
-    text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+    text: 'You are so tired that you fall asleep while exploring the castle and some terrible monster kills you while you where sleeping.',
     options: [
       {
-        text: 'Restart',
+        text: 'Restart the jurney',
         nextText: -1
       }
     ]
@@ -115,7 +114,7 @@ const textNodes = [
     text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
     options: [
       {
-        text: 'Restart',
+        text: 'Restart the jurney',
         nextText: -1
       }
     ]
@@ -160,7 +159,7 @@ const textNodes = [
     text: 'Your attempts to run are in vain and the monster easily catches.',
     options: [
       {
-        text: 'Restart',
+        text: 'Restart the jurney',
         nextText: -1
       }
     ]
@@ -170,7 +169,7 @@ const textNodes = [
     text: 'You foolishly thought this monster could be slain with a single sword.',
     options: [
       {
-        text: 'Restart',
+        text: 'Restart the jurney',
         nextText: -1
       }
     ]
@@ -180,7 +179,7 @@ const textNodes = [
     text: 'The monster laughed as you hid behind your shield and ate you.',
     options: [
       {
-        text: 'Restart',
+        text: 'Restart the jurney',
         nextText: -1
       }
     ]
@@ -190,7 +189,7 @@ const textNodes = [
     text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
     options: [
       {
-        text: 'Congratulations. Play Again.',
+        text: 'Congratulations. Play the jurney again.',
         nextText: -1
       }
     ]
@@ -198,3 +197,18 @@ const textNodes = [
 ]
 
 startGame()
+
+
+
+
+
+options = {
+  "cursorOuter": "circle-basic",
+  "hoverEffect": "circle-move",
+  "hoverItemMove": false,
+  "defaultCursor": false,
+  "outerWidth": 30,
+  "outerHeight": 30
+}
+magicMouse(options);
+            
