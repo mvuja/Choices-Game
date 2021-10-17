@@ -154,3 +154,11 @@ html,body{
 #magicPointer{
   z-index: 2;
 }
+
+
+@media (hover: none) and (pointer: coarse) {
+  #magicPointer,
+  #magicMouseCursor{
+    display: none;
+  }
+}
